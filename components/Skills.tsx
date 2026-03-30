@@ -58,7 +58,7 @@ const skills = [
   },
   {
     category: 'Otras Tecnologías',
-    items: ['Microservicios', 'Machine Learning', 'RabbitMQ', 'Kubernetes']
+    items: ['Microservicios', 'RabbitMQ', 'Kubernetes']
   }
 ]
 

@@ -41,6 +41,8 @@ import { Education } from '@/components/Education'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 
+import { CurrentGoals } from '@/components/CurrentGoals'
+
 export default function Home() {
   return (
     <main className="relative min-h-screen w-full overflow-x-hidden">
@@ -50,6 +52,7 @@ export default function Home() {
       {/* Sections */}
       <Hero />
       <About />
+      <CurrentGoals />
       <Skills />
       <ProjectsGrid />
       <section id="github-3d" className="py-20 relative overflow-hidden">

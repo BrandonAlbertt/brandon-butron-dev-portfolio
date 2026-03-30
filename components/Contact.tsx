@@ -90,7 +90,7 @@ export function Contact() {
                     href="mailto:brandon@example.com"
                     className="text-accent hover:text-accent/80 transition-colors font-semibold"
                   >
-                    brandon@example.com
+                    brandonbutron.ing.software@gmail.com
                   </a>
                   <p className="text-sm text-muted-foreground mt-1">
                     Te responderé lo antes posible
@@ -108,7 +108,7 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-foreground mb-2">LinkedIn</h3>
                   <a
-                    href="https://linkedin.com/in/brandon-hualpa"
+                    href="https://linkedin.com/in/brandon-alberto-hualpa-butron-730a7a370"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent hover:text-accent/80 transition-colors font-semibold"
@@ -131,7 +131,7 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-foreground mb-2">GitHub</h3>
                   <a
-                    href="https://github.com/brandon-hualpa"
+                    href="https://github.com/BrandonAlbertt"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent hover:text-accent/80 transition-colors font-semibold"
@@ -154,7 +154,7 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-foreground mb-2">YouTube</h3>
                   <a
-                    href="https://youtube.com/@brandonhualpa"
+                    href="https://youtube.com/@brandonbytes?si=UFkq8JG7QV5AzhhU"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent hover:text-accent/80 transition-colors font-semibold"
@@ -190,7 +190,7 @@ export function Contact() {
                   <label className="block text-sm font-semibold text-foreground mb-2">
                     Nombre
                   </label>
-                  <input
+                  <input disabled
                     type="text"
                     name="name"
                     value={formData.name}
@@ -206,7 +206,7 @@ export function Contact() {
                   <label className="block text-sm font-semibold text-foreground mb-2">
                     Email
                   </label>
-                  <input
+                    <input disabled
                     type="email"
                     name="email"
                     value={formData.email}
@@ -222,7 +222,7 @@ export function Contact() {
                   <label className="block text-sm font-semibold text-foreground mb-2">
                     Mensaje
                   </label>
-                  <textarea
+                  <textarea disabled
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -234,9 +234,9 @@ export function Contact() {
                 </div>
 
                 {/* Submit Button */}
-                <button
+                <button  disabled
                   type="submit"
-                  disabled={loading}
+                  //disabled={loading}
                   className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-secondary to-accent text-accent-foreground font-bold hover:shadow-xl hover:shadow-secondary/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 relative overflow-hidden group"
                 >
                   {/* Manga shine effect */}

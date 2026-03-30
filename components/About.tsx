@@ -31,7 +31,6 @@ const technologies = [
   'Docker',
   'Git',
   'Linux',
-  'Google Cloud'
 ]
 
 export function About() {
@@ -58,7 +57,7 @@ export function About() {
           <div className="order-2 lg:order-1 flex justify-center">
             <div className="relative w-full max-w-md h-96 rounded-xl overflow-hidden border border-primary/30 shadow-2xl shadow-primary/20 hover:shadow-primary/40 transition-shadow duration-300">
               <Image
-                src="/profile.jpg"
+                src="/Profile.jpg"
                 alt="Brandon Alberto Hualpa Butron"
                 fill
                 className="object-cover"
@@ -71,21 +70,19 @@ export function About() {
           <div className="order-1 lg:order-2 space-y-6">
             <div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">
-                Ingeniero de Software Graduado
+                Ingeniero de Software Egresado
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Soy un ingeniero de software recién graduado de la Universidad Tecnológica del Perú, 
-                especializado en desarrollo backend y construcción de sistemas escalables. 
-                Mi pasión radica en crear soluciones robustas y eficientes que resuelvan problemas complejos.
+                Soy egresado de Ingeniería de Software de la Universidad Tecnológica del Perú, con interés principal en el desarrollo backend y la construcción de APIs y sistemas escalables.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                He desarrollado experiencia sólida en APIs REST, arquitectura de microservicios y 
-                entornos Linux. Soy un desarrollador autodidacta comprometido con el aprendizaje continuo 
-                y la adopción de las mejores prácticas en desarrollo de software.
+                Durante mi formación académica he trabajado con tecnologías como Java, Spring Boot, Node.js y bases de datos relacionales y NoSQL. También tengo experiencia trabajando en entornos Linux y utilizando herramientas modernas de desarrollo como Docker y Git.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                Me considero un desarrollador autodidacta, enfocado en mejorar continuamente mis habilidades técnicas y aprender nuevas tecnologías que me permitan construir soluciones eficientes y bien diseñadas.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Cuando no estoy programando, disfruto contribuir en proyectos de código abierto, 
-                explorar nuevas tecnologías y compartir conocimiento con la comunidad de desarrolladores.
+                Además del desarrollo de software, me interesa el diseño y desarrollo de videojuegos utilizando motores como Unity y Godot.
               </p>
             </div>
 

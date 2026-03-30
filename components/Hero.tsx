@@ -32,11 +32,12 @@ export function Hero() {
                 </span>
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-primary via-secondary to-accent mt-4 rounded-full" />
-              <p className="text-xl sm:text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black mt-4">Software Engineer</p>
+              <p className="text-xl sm:text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black mt-4">Egresado de Ingeniería de Software</p>
+              <p className="text-xl sm:text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black mt-4">Backend Developer Junior</p>
             </div>
 
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed hover:text-foreground transition-colors">
-              Ingeniero de software graduado enfocado en desarrollo backend, APIs escalables y sistemas robustos. Especializado en Java, REST APIs, microservicios y entornos Linux. Apasionado por el diseño de videojuegos.
+              Desarrollador Backend egresado de Ingeniería de Software con enfoque en construcción de APIs REST, arquitectura de microservicios y sistemas escalables en entornos Linux. Apasionado por el aprendizaje continuo, el desarrollo de software robusto y el diseño de videojuegos.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
@@ -53,10 +54,10 @@ export function Hero() {
 
             <div className="flex gap-4 pt-4">
               <GitHubReposDropdown />
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-card hover:bg-primary/20 text-foreground hover:text-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-110" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/brandon-alberto-hualpa-butron-730a7a370" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-card hover:bg-primary/20 text-foreground hover:text-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-110" aria-label="LinkedIn">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="https://youtube.com/@brandonhualpa" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-card hover:bg-secondary/20 text-foreground hover:text-secondary transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 hover:scale-110" aria-label="YouTube">
+              <a href="https://youtube.com/@brandonbytes?si=UFkq8JG7QV5AzhhU" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-card hover:bg-secondary/20 text-foreground hover:text-secondary transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20 hover:scale-110" aria-label="YouTube">
                 <Youtube className="w-6 h-6" />
               </a>
             </div>

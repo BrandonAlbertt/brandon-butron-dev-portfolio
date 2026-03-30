@@ -56,7 +56,7 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Sígueme</h4>
             <div className="flex justify-center md:justify-end gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/BrandonAlbertt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-card border border-primary/30 text-foreground hover:bg-primary/20 hover:text-primary hover:border-primary/60 transition-all duration-300"
@@ -65,7 +65,7 @@ export function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/brandon-alberto-hualpa-butron-730a7a370"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-card border border-primary/30 text-foreground hover:bg-primary/20 hover:text-primary hover:border-primary/60 transition-all duration-300"
@@ -74,7 +74,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://youtube.com/@brandonbytes?si=UFkq8JG7QV5AzhhU"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-card border border-primary/30 text-foreground hover:bg-primary/20 hover:text-primary hover:border-primary/60 transition-all duration-300"

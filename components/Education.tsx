@@ -54,7 +54,7 @@ export function Education() {
 
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-foreground mb-1">
-                    Software Engineering
+                   Ingeniería de Software
                   </h3>
                   <p className="text-lg text-primary font-semibold">
                     Universidad Tecnológica del Perú (UTP)
@@ -89,7 +89,7 @@ export function Education() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Estado</p>
-                    <p className="font-semibold text-accent">Graduado</p>
+                    <p className="font-semibold text-accent">Egresado</p>
                   </div>
                 </div>
               </div>
