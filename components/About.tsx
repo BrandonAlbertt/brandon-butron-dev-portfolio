@@ -57,7 +57,7 @@ export function About() {
           <div className="order-2 lg:order-1 flex justify-center">
             <div className="relative w-full max-w-md h-96 rounded-xl overflow-hidden border border-primary/30 shadow-2xl shadow-primary/20 hover:shadow-primary/40 transition-shadow duration-300">
               <Image
-                src="/Profile.jpg"
+                src="/profile.jpg"
                 alt="Brandon Alberto Hualpa Butron"
                 fill
                 className="object-cover"
