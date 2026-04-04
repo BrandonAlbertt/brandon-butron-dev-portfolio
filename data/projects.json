@@ -1,33 +1,53 @@
 [
   {
     "id": 1,
-    "title": "E-commerce API Platform",
-    "description": "RESTful API built with Java and Spring Boot for managing products, orders, and inventory. Includes JWT authentication and rate limiting.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-    "technologies": ["Java", "Spring Boot", "REST APIs", "MariaDB", "JWT"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
+    "title": "Sistema de Alertas con Microservicios",
+    "description": "Sistema de automatización basado en microservicios que integra una API en Flask, un chatbot de WhatsApp y una base de datos Cassandra. Utiliza Docker para la contenerización, permitiendo el procesamiento de mensajes en tiempo real de emergencias, almacenamiento distribuido y escalabilidad del sistema.",
+    "image": "/images/proyectos/1.png",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Docker",
+      "Cassandra",
+      "n8n",
+      "Twilio",
+      "REST APIs"
+    ],
+    "github": "https://github.com/BrandonAlbertt/Sistema-Alertas-Microservicios.git",
+    "demo": "https://docs.google.com/document/d/1anpy3CYd0mWDpJ60zXOZqaj9GD38ciM4/edit?pli=1#heading=h.ybam4otlhsa1",
+    "video": "https://www.youtube.com/embed/IQFEINKOrmQ?si=bFV0mgeCPo2h4Zey"
   },
   {
     "id": 2,
-    "title": "React Dashboard Application",
-    "description": "Real-time analytics dashboard with interactive charts. Features user authentication, data visualization, and responsive design.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-    "technologies": ["React", "JavaScript", "Tailwind CSS", "APIs", "Docker"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
+    "title": "Portafolio de Desarrollador Web",
+    "description": "Portafolio personal desarrollado con Next.js, React y TypeScript. Incluye arquitectura basada en componentes, secciones de proyectos, certificados y diseño responsive.",
+    "image": "/images/proyectos/2.png",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "v0 AI"
+    ],
+    "github": "https://github.com/BrandonAlbertt/brandon-butron-dev-portfolio.git",
+    "demo": "https://brandonbutron.dev",
+    "video": "https://www.youtube.com/embed/r-Ir2rV03vY?si=YhHexn5K9F4rCZdb"
   },
   {
     "id": 3,
-    "title": "Microservices Architecture",
-    "description": "Distributed system with multiple microservices communicating via message queues. Deployed on Docker containers with Kubernetes orchestration.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-    "technologies": ["Java", "Docker", "Git", "Linux", "REST APIs"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
+    "title": "Prototipo Multiplayer LAN en Godot",
+    "description": "Prototipo de sistema multiplayer en red local (LAN) desarrollado con Godot y C#. Permite que un jugador cree una partida como host y otros jugadores se conecten mediante una dirección IP dentro de la misma red. El proyecto demuestra arquitectura básica de networking, sincronización de jugadores y gestión de conexiones en tiempo real.",
+    "image": "/images/proyectos/3.png",
+    "technologies": [
+      "Godot",
+      "C#",
+      ".NET",
+      "Multiplayer",
+      "LAN Networking"
+    ],
+    "github": "https://github.com/BrandonAlbertt/JuegoOnlineGodot.git",
+    "demo": "https://drive.google.com/file/d/1lRxIa9of2HLN3_sfXNCCS0J9bG9FdcUa/view?usp=sharing",
+    "video": "https://www.youtube.com/embed/5Ax7yEEJz0M?si=sWEbhG4FX0wcE63l"
   },
   {
     "id": 4,
@@ -38,85 +58,6 @@
     "github": "https://github.com",
     "demo": "https://demo.example.com",
     "video": "https://youtube.com"
-  },
-  {
-    "id": 5,
-    "title": "Cloud Database Migration",
-    "description": "Designed and executed migration of legacy databases to Cassandra for improved scalability. Includes data validation and optimization.",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop",
-    "technologies": ["Cassandra", "MariaDB", "Linux", "Google Cloud", "Docker"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 6,
-    "title": "Mobile Chat Application",
-    "description": "Cross-platform mobile chat app built with React Native. Features real-time messaging, file sharing, and user authentication.",
-    "image": "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=500&h=300&fit=crop",
-    "technologies": ["React", "JavaScript", "REST APIs", "MariaDB", "Docker"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 7,
-    "title": "Linux System Administration",
-    "description": "Automated infrastructure setup using shell scripts and configuration management. Implemented security hardening and monitoring solutions.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-    "technologies": ["Linux", "Git", "Docker", "Java", "REST APIs"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 8,
-    "title": "Machine Learning Pipeline",
-    "description": "Data preprocessing and ML model training pipeline with Python. Includes feature engineering, model evaluation, and deployment scripts.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-    "technologies": ["Python", "Google Cloud", "JavaScript", "REST APIs", "Docker"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 9,
-    "title": "API Gateway Solution",
-    "description": "Centralized API gateway with request routing, authentication, and rate limiting. Built with Spring Boot and deployed on Kubernetes.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-    "technologies": ["Java", "Spring Boot", "REST APIs", "Docker", "Git"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 10,
-    "title": "Web Performance Optimization",
-    "description": "Optimized frontend performance achieving 95+ Lighthouse scores. Implemented code splitting, lazy loading, and image optimization.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-    "technologies": ["React", "JavaScript", "HTML", "CSS", "Git"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 11,
-    "title": "GraphQL Server Implementation",
-    "description": "Built a GraphQL API server with Apollo Server. Includes schema design, resolver functions, and subscription support for real-time data.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-    "technologies": ["JavaScript", "REST APIs", "MariaDB", "Docker", "Git"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
-  },
-  {
-    "id": 12,
-    "title": "Data Visualization Platform",
-    "description": "Interactive data visualization tool with real-time charts and maps. Supports multiple data sources and custom dashboard creation.",
-    "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=300&fit=crop",
-    "technologies": ["React", "JavaScript", "HTML", "CSS", "Google Cloud"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
   }
+
 ]
