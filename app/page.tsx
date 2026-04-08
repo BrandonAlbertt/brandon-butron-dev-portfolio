@@ -37,6 +37,7 @@ import { Skills } from '@/components/Skills'
 import { ProjectsGrid } from '@/components/ProjectsGrid'
 import { GitHub3DCube } from '@/components/GitHub3DCube'
 import { CertificatesGrid } from '@/components/CertificatesGrid'
+import { AcademicDegrees } from '@/components/AcademicDegrees'
 import { Education } from '@/components/Education'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
@@ -61,6 +62,7 @@ export default function Home() {
         </div>
       </section>
       <CertificatesGrid />
+      <AcademicDegrees />
       <Education />
       <Contact />
 

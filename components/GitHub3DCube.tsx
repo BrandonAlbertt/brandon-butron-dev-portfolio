@@ -168,10 +168,9 @@ export function GitHub3DCube() {
 
       {/* Info Text */}
       <div className="text-center max-w-sm">
-        <h3 className="text-2xl font-bold text-foreground mb-2">Explora mi Trabajo en 3D</h3>
+        <h3 className="text-2xl font-bold text-foreground mb-2">Vista 3D de mi Portafolio</h3>
         <p className="text-muted-foreground">
-          Un cubo interactivo que muestra mis repositorios y especialidades. 
-          Mueve el mouse para explorar desde diferentes ángulos.
+          Representación visual de mis habilidades y proyectos en un entorno tridimensional.
         </p>
       </div>
 

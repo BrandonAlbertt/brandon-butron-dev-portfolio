@@ -1,8 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, Linkedin, Youtube } from 'lucide-react'
+import { ArrowRight, Linkedin, Youtube, Download } from 'lucide-react'
 import { GitHubReposDropdown } from './GitHubReposDropdown'
 
 const scrollToSection = (sectionId: string) => {
@@ -12,8 +11,8 @@ const scrollToSection = (sectionId: string) => {
 
 export function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden">
-      <div className="absolute inset-0 -z-10">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 pb-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/3 to-accent/3" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/30 to-primary/0 rounded-full blur-3xl opacity-50 animate-pulse" />
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-tl from-accent/30 to-accent/0 rounded-full blur-3xl opacity-50 animate-pulse" />
@@ -32,15 +31,16 @@ export function Hero() {
                 </span>
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-primary via-secondary to-accent mt-4 rounded-full" />
-              <p className="text-xl sm:text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black mt-4">Egresado de Ingeniería de Software</p>
-              <p className="text-xl sm:text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black mt-4">Backend Developer Junior</p>
+              <p className="text-xl sm:text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black mt-4">Backend Developer | Junior / Trainee</p>
             </div>
 
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed hover:text-foreground transition-colors">
-              Desarrollador Backend egresado de Ingeniería de Software con enfoque en construcción de APIs REST, arquitectura de microservicios y sistemas escalables en entornos Linux. Apasionado por el aprendizaje continuo, el desarrollo de software robusto y el diseño de videojuegos.
+              Desarrollador backend egresado de Ingeniería de Software, enfocado en la construcción de APIs REST, sistemas escalables y arquitectura de microservicios.
+              Experiencia desarrollando proyectos con Java, Spring Boot, Node.js y bases de datos relacionales y NoSQL. Manejo de herramientas como Docker, Git y entornos Linux.
+              Busco oportunidades como desarrollador backend junior o practicante, donde pueda aportar valor desde el inicio y continuar fortaleciendo mis habilidades profesionales.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start flex-wrap">
               <button onClick={() => scrollToSection('projects')} className="group px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden">
                 <div className="absolute inset-0 bg-white/20 transform -skew-x-12 group-hover:translate-x-full transition-transform duration-300" />
                 <span className="relative">Ver Proyectos</span>
@@ -50,6 +50,15 @@ export function Hero() {
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
                 <span className="relative">Contactar</span>
               </button>
+              <a
+                href="/Documentos/cv/CV-Brandon-Hualpa-Backend-Developer.pdf"
+                download
+                className="group px-8 py-3 rounded-lg bg-gradient-to-r from-accent to-primary text-accent-foreground font-bold hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-white/20 transform -skew-x-12 group-hover:translate-x-full transition-transform duration-300" />
+                <Download className="w-4 h-4 relative" />
+                <span className="relative">Descargar CV</span>
+              </a>
             </div>
 
             <div className="flex gap-4 pt-4">

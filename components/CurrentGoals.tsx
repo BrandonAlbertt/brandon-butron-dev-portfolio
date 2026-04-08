@@ -19,7 +19,12 @@ export function CurrentGoals() {
                         <span className="text-accent">.</span>
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Actualmente busco oportunidades como desarrollador backend junior o trainee donde pueda aplicar mis conocimientos en desarrollo de APIs, bases de datos y arquitectura de software mientras continúo aprendiendo y creciendo profesionalmente.
+                        Actualmente busco oportunidades como Backend Developer Junior o Practicante, adaptándome a las necesidades del equipo y del proyecto.
+
+                        Estoy preparado para asumir responsabilidades técnicas en desarrollo backend, así como para seguir aprendiendo dentro de un entorno profesional.
+
+                        Mi objetivo es aportar valor desde el inicio, mientras continúo desarrollando experiencia en proyectos reales.
+
                     </p>
                 </div>
             </div>

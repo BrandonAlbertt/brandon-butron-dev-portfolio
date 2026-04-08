@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Constancia de Egresado",
+        "institution": "Universidad Tecnológica del Perú (UTP)",
+        "year": 2025,
+        "status": "Disponible",
+        "description": "Documento académico que acredita mi condición de egresado en Ingeniería de Software por la Universidad Tecnológica del Perú.",
+        "documentUrl": "/Documentos/titulosAcademicos/ConstanciaEgresado.pdf",
+        "previewImage": "/images/TitulosAcademicos/ConstanciaEgresado.jpg"
+    }
+]

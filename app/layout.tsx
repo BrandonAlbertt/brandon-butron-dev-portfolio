@@ -39,6 +39,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { WhatsAppFloatButton } from '@/components/WhatsAppFloatButton'
 import './globals.css'
 
 // Importar fuente Geist desde Google Fonts
@@ -94,8 +95,11 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {/* Aquí se renderiza el contenido de cada página */}
           {children}
+
+          {/* Botón flotante de WhatsApp - visible en todas las páginas */}
+          <WhatsAppFloatButton />
         </ThemeProvider>
-        
+
         {/* Analytics de Vercel para rastrear visitantes */}
         <Analytics />
       </body>

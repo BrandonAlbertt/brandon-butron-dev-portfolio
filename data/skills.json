@@ -1,0 +1,84 @@
+[
+    {
+        "category": "Programación",
+        "items": [
+            "Java",
+            "JavaScript",
+            "Python",
+            "C#",
+            "SQL"
+        ]
+    },
+    {
+        "category": "Frontend",
+        "items": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "category": "Backend",
+        "items": [
+            "REST APIs",
+            "Node.js",
+            "Express.js",
+            "Spring Boot"
+        ]
+    },
+    {
+        "category": "Bases de Datos",
+        "items": [
+            "MySQL",
+            "SQLite",
+            "Firebase"
+        ]
+    },
+    {
+        "category": "Desarrollo de Juegos",
+        "items": [
+            "Unity",
+            "Godot",
+            "C#",
+            "GDScript"
+        ]
+    },
+    {
+        "category": "DevOps & Herramientas",
+        "items": [
+            "Git",
+            "GitHub",
+            "Docker",
+            "Linux"
+        ]
+    },
+    {
+        "category": "Automatización & Integración",
+        "items": [
+            "APIs REST",
+            "n8n",
+            "Webhooks",
+            "Google Sheets API",
+            "Telegram Bots"
+        ]
+    },
+    {
+        "category": "IoT & Electrónica",
+        "items": [
+            "Arduino",
+            "Raspberry Pi",
+            "Sensores"
+        ]
+    },
+    {
+        "category": "Metodologías & Software",
+        "items": [
+            "Scrum",
+            "Kanban",
+            "ISO 9001 (conceptos básicos)",
+            "Modelado de Software"
+        ]
+    }
+]

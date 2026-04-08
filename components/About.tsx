@@ -25,12 +25,11 @@ import Image from 'next/image'
 
 const technologies = [
   'Java',
+  'HTML',
+  'CSS',
   'JavaScript',
-  'React',
-  'REST APIs',
-  'Docker',
-  'Git',
-  'Linux',
+  'SQL',
+  'REST APIs'
 ]
 
 export function About() {
@@ -73,16 +72,16 @@ export function About() {
                 Ingeniero de Software Egresado
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Soy egresado de Ingeniería de Software de la Universidad Tecnológica del Perú, con interés principal en el desarrollo backend y la construcción de APIs y sistemas escalables.
+                  Soy egresado de Ingeniería de Software con enfoque en desarrollo backend y construcción de sistemas escalables.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Durante mi formación académica he trabajado con tecnologías como Java, Spring Boot, Node.js y bases de datos relacionales y NoSQL. También tengo experiencia trabajando en entornos Linux y utilizando herramientas modernas de desarrollo como Docker y Git.
+                He desarrollado proyectos prácticos implementando APIs REST, integración de servicios y manejo de bases de datos, utilizando tecnologías como Java (Spring Boot), Node.js y Python.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Me considero un desarrollador autodidacta, enfocado en mejorar continuamente mis habilidades técnicas y aprender nuevas tecnologías que me permitan construir soluciones eficientes y bien diseñadas.
+                Tengo experiencia trabajando con Docker, Git y entornos Linux, lo que me permite desarrollar y desplegar aplicaciones de forma estructurada.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Además del desarrollo de software, me interesa el diseño y desarrollo de videojuegos utilizando motores como Unity y Godot.
+                Me considero una persona proactiva, autodidacta y orientada a la resolución de problemas. Busco integrarme a un equipo donde pueda aportar mis conocimientos y seguir creciendo profesionalmente.
               </p>
             </div>
 

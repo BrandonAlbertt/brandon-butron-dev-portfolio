@@ -40,6 +40,13 @@ export function Navbar() {
     { name: 'Acerca de', href: '#about' },
     { name: 'Habilidades', href: '#skills' },
     { name: 'Proyectos', href: '#projects' },
+
+    // MODIFICADO:
+    // Agregué la nueva sección de títulos académicos.
+    // OJO: el href debe coincidir exactamente con el id del componente AcademicDegrees:
+    // <section id="academic-degrees">
+    { name: 'Títulos', href: '#academic-degrees' },
+
     { name: 'Certificados', href: '#certificates' },
     { name: 'Contacto', href: '#contact' },
   ]
