@@ -3,16 +3,16 @@
     "id": 1,
     "title": "Tutor STEM - Algoritmica",
     "organization": "Universidad Tecnológica del Perú (UTP)",
-    "year": 2025,
-    "certificateLink": "/Documentos/certificados/TutorSTEM-Algoritmica.pdf",
+    "year": 2024,
+    "certificateLink": "/documentos/certificados/TutorSTEM-Algoritmica.pdf",
     "certificateImage": "/images/certificados/TutorSTEM-Algoritmica.jpg"
   },
   {
     "id": 2,
     "title": "Soporte Técnico de Computadoras",
     "organization": "Universidad Tecnológica del Perú (UTP)",
-    "year": 2023,
-    "certificateLink": "/Documentos/certificados/SoporteTecnicodecomputadoras.pdf",
+    "year": 2024,
+    "certificateLink": "/documentos/certificados/SoporteTecnicodecomputadoras.pdf",
     "certificateImage": "/images/certificados/SoporteTecnicodecomputadoras.jpg"
   },
   {
@@ -20,15 +20,15 @@
     "title": "Certificado Inglés A2 MCER",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/Documentos/certificados/InglesA2MCER.pdf",
+    "certificateLink": "/documentos/certificados/InglesA2MCER.pdf",
     "certificateImage": "/images/certificados/InglesA2MCER.jpg"
   },
   {
     "id": 4,
     "title": "Excel Intermedio",
     "organization": "Universidad Tecnológica del Perú (UTP)",
-    "year": 2023,
-    "certificateLink": "/Documentos/certificados/ExelIntermedio.pdf",
+    "year": 2024,
+    "certificateLink": "/documentos/certificados/ExelIntermedio.pdf",
     "certificateImage": "/images/certificados/ExelIntermedio.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Tutor STEM Física",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/Documentos/certificados/TutorSTEMfisica.pdf",
+    "certificateLink": "/documentos/certificados/TutorSTEMfisica.pdf",
     "certificateImage": "/images/certificados/TutorSTEMfisica.jpg"
   }
 ]

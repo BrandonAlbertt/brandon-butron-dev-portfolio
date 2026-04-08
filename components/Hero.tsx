@@ -51,7 +51,7 @@ export function Hero() {
                 <span className="relative">Contactar</span>
               </button>
               <a
-                href="/Documentos/cv/CV-Brandon-Hualpa-Backend-Developer.pdf"
+                href="/documentos/cv/CV-Brandon-Hualpa-Backend-Developer.pdf"
                 download
                 className="group px-8 py-3 rounded-lg bg-gradient-to-r from-accent to-primary text-accent-foreground font-bold hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden"
               >

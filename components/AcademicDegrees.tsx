@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Award, Calendar, Building2, FileCheck } from 'lucide-react'
 import { DocumentModal, type DocumentData } from './DocumentModal'
-import academicDegreesData from '@/data/TitulosAcademicos.json'
+import academicDegreesData from '@/data/titulos-academicos.json'
 
 /**
  * COMPONENTE ACADEMIC DEGREES (TÍTULOS ACADÉMICOS)
