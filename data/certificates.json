@@ -12,7 +12,7 @@
     "title": "Soporte Técnico de Computadoras",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/documentos/certificados/SoporteTecnicodecomputadoras.pdf",
+    "certificateLink": "/documentos-pdf/certificados/SoporteTecnicodecomputadoras.pdf",
     "certificateImage": "/images/certificados/SoporteTecnicodecomputadoras.jpg"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Certificado Inglés A2 MCER",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/documentos/certificados/InglesA2MCER.pdf",
+    "certificateLink": "/documentos-pdf/certificados/InglesA2MCER.pdf",
     "certificateImage": "/images/certificados/InglesA2MCER.jpg"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Excel Intermedio",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/documentos/certificados/ExelIntermedio.pdf",
+    "certificateLink": "/documentos-pdf/certificados/ExelIntermedio.pdf",
     "certificateImage": "/images/certificados/ExelIntermedio.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Tutor STEM Física",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/documentos/certificados/TutorSTEMfisica.pdf",
+    "certificateLink": "/documentos-pdf/certificados/TutorSTEMfisica.pdf",
     "certificateImage": "/images/certificados/TutorSTEMfisica.jpg"
   }
 ]
