@@ -50,14 +50,38 @@
     "video": "https://www.youtube.com/embed/5Ax7yEEJz0M?si=sWEbhG4FX0wcE63l"
   },
   {
+
     "id": 4,
-    "title": "IoT Sensor Network",
-    "description": "Raspberry Pi and Arduino-based IoT system for environmental monitoring. Collects data from multiple sensors and visualizes trends.",
-    "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=300&fit=crop",
-    "technologies": ["Raspberry Pi", "Arduino", "Python", "JavaScript", "Google Cloud"],
-    "github": "https://github.com",
-    "demo": "https://demo.example.com",
-    "video": "https://youtube.com"
+
+    "title": "Reparación e Instalación Manual de Windows sin USB Boot",
+
+    "description": "Reparación de laptop Dell Inspiron 5567 con fallas en el sistema de alimentación y refrigeración. Se reemplazó el adaptador de corriente al detectar potencia incorrecta (AC Adapter 'Unknown') y se sustituyó el ventilador dañado tras errores de sistema. Posteriormente, se realizó la instalación manual de Windows sin USB booteable utilizando DiskPart, DISM y BCDBoot, configurando GPT y arranque UEFI. Proyecto enfocado en diagnóstico técnico, mantenimiento de hardware y despliegue de sistemas operativos.",
+    "image": "/images/proyectos/4.png",
+
+    "technologies": [
+
+      "Windows",
+
+      "DiskPart",
+
+      "DISM",
+
+      "BCDBoot",
+
+      "UEFI",
+
+      "GPT",
+
+      "Soporte Técnico"
+
+    ],
+
+    "github": "#",
+
+    "demo": "https://youtu.be/0LkYvb5X7j0?si=Ezun07656k1lP_Vd",
+
+    "video": "https://www.youtube.com/embed/0LkYvb5X7j0?si=YmpJiQCLx4-lUBBN"
+
   }
 
 ]
