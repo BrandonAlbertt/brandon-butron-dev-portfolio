@@ -82,6 +82,28 @@
 
     "video": "https://www.youtube.com/embed/0LkYvb5X7j0?si=YmpJiQCLx4-lUBBN"
 
+  },
+  {
+    "id": 5,
+    "title": "Sistema Web Videoteca en Java (Servlets + JSP + MySQL)",
+    "description": "Aplicación web desarrollada con Java Servlets, JSP, Maven y Apache Tomcat 10, conectada a una base de datos MySQL/MariaDB. El sistema permite la gestión de videos por categorías, autenticación de usuarios con diferentes tipos de cuenta (Free y Premium), interacción mediante comentarios y favoritos, y administración de contenido desde un dashboard. Incluye generación de reportes dinámicos (boletas) con JasperReports, exportación de datos a Excel, recuperación de contraseña mediante Gmail SMTP y un chatbot básico integrado con Landbot.io. Proyecto enfocado en arquitectura MVC y patrón DAO, simulando un entorno real de gestión de contenido multimedia.",
+    "image": "/images/proyectos/5.png",
+    "technologies": [
+      "Java",
+      "Servlets",
+      "JSP",
+      "Maven",
+      "Apache Tomcat 10",
+      "MySQL",
+      "JasperReports",
+      "Gmail SMTP",
+      "Landbot.io",
+      "MVC",
+      "DAO"
+    ],
+    "github": "https://github.com/BrandonAlbertt/VideoTecaMavenJava.git",
+    "demo": "https://drive.google.com/file/d/16uNDSG4etqXvOK2UNWODsK6J4QUnqmMn/view?usp=drive_link",
+    "video": "https://www.youtube.com/embed/eOn6wNTNepQ?si=u9hBfrkLe7-bIVtj"
   }
 
 ]
