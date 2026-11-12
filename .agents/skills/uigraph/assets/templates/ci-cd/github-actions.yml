@@ -1,0 +1,58 @@
+# Set UIGRAPH_TOKEN and UIGRAPH_GATEWAY_URL as repository secrets.
+# On hosted UIGraph, drop UIGRAPH_GATEWAY_URL and add --enterprise to each uigraph-cli command.
+
+name: UIGraph
+
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  pull_request:
+    branches: [main, master]
+
+env:
+  UIGRAPH_IMAGE: uigraph/uigraph-cli:latest
+
+jobs:
+  uigraph-sync:
+    if: "!startsWith(github.ref, 'refs/tags/')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Dry run on PR
+        if: github.event_name == 'pull_request'
+        env:
+          UIGRAPH_TOKEN: ${{ secrets.UIGRAPH_TOKEN }}
+          UIGRAPH_GATEWAY_URL: ${{ secrets.UIGRAPH_GATEWAY_URL }}
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace \
+            -e UIGRAPH_TOKEN -e UIGRAPH_GATEWAY_URL \
+            "$UIGRAPH_IMAGE" sync --dry-run
+
+      - name: Sync to UIGraph on push
+        if: github.event_name == 'push'
+        env:
+          UIGRAPH_TOKEN: ${{ secrets.UIGRAPH_TOKEN }}
+          UIGRAPH_GATEWAY_URL: ${{ secrets.UIGRAPH_GATEWAY_URL }}
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace \
+            -e UIGRAPH_TOKEN -e UIGRAPH_GATEWAY_URL \
+            "$UIGRAPH_IMAGE" sync
+
+  uigraph-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Record release on the UIGraph timeline
+        env:
+          UIGRAPH_TOKEN: ${{ secrets.UIGRAPH_TOKEN }}
+          UIGRAPH_GATEWAY_URL: ${{ secrets.UIGRAPH_GATEWAY_URL }}
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace \
+            -e UIGRAPH_TOKEN -e UIGRAPH_GATEWAY_URL \
+            "$UIGRAPH_IMAGE" release

@@ -1,0 +1,17 @@
+{
+  "name": "Group context examples",
+  "description": "Do not add groups by default. Use groups only when source evidence or a user request identifies an explicit boundary.",
+  "nodes": {
+    "cdn": { "type": "cloud", "name": "CDN", "cloud": "AWS", "service": "Amazon CloudFront" },
+    "api": { "type": "cloud", "name": "API", "cloud": "AWS", "service": "Amazon API Gateway" },
+    "worker": { "type": "component", "name": "Worker", "componentId": "flow_diagram_component_service" },
+    "orders": { "type": "data-source", "name": "Orders" },
+    "cache": { "type": "cloud", "name": "Cache", "cloud": "AWS", "service": "Amazon ElastiCache" }
+  },
+  "groups": {
+    "private-subnet": {
+      "name": "Private Subnet",
+      "nodes": ["api", "worker", "orders", "cache"]
+    }
+  }
+}

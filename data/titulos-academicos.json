@@ -1,12 +1,44 @@
 [
-    {
-        "id": 1,
-        "title": "Constancia de Egresado",
-        "institution": "Universidad Tecnológica del Perú (UTP)",
-        "year": 2025,
-        "status": "Disponible",
-        "description": "Documento académico que acredita mi condición de egresado en Ingeniería de Software por la Universidad Tecnológica del Perú.",
-        "documentUrl": "/documentos-pdf/titulos-academicos/ConstanciaEgresado.pdf",
-        "previewImage": "/images/titulos-academicos/ConstanciaEgresado.jpg"
-    }
+  {
+    "id": 1,
+    "key": "bachiller",
+    "tabLabel": "Grado de Bachiller",
+    "badgeLabel": "Activo · Verificado",
+    "degreeType": "Grado Académico",
+    "title": "Bachiller en Ingeniería de Software",
+    "institution": "Universidad Tecnológica del Perú (UTP)",
+    "year": 2026,
+    "status": "Verificado",
+    "description": "Grado académico de Bachiller en Ingeniería de Software otorgado por la Universidad Tecnológica del Perú, respaldando formación integral en arquitectura de software, desarrollo backend y gestión de sistemas.",
+    "documentUrl": "/images/titulos-academicos/grado-bachiller.webp",
+    "previewImage": "/images/titulos-academicos/grado-bachiller.webp"
+  },
+  {
+    "id": 2,
+    "key": "egresado",
+    "tabLabel": "Constancia de Egresado",
+    "badgeLabel": "Respaldo",
+    "degreeType": "Constancia Oficial",
+    "title": "Constancia de Egresado",
+    "institution": "Universidad Tecnológica del Perú (UTP)",
+    "year": 2025,
+    "status": "Disponible",
+    "description": "Documento académico oficial que acredita la culminación satisfactoria del plan de estudios de Ingeniería de Software en la Universidad Tecnológica del Perú.",
+    "documentUrl": "/documentos-pdf/titulos-academicos/ConstanciaEgresado.pdf",
+    "previewImage": "/images/titulos-academicos/ConstanciaEgresado.jpg"
+  },
+  {
+    "id": 3,
+    "key": "titulo",
+    "tabLabel": "Título Profesional",
+    "badgeLabel": "Próximamente",
+    "degreeType": "Título Profesional",
+    "title": "Título Profesional de Ingeniero de Software",
+    "institution": "Universidad Tecnológica del Perú (UTP)",
+    "year": 2026,
+    "status": "En proceso",
+    "description": "Siguiente hito de acreditación profesional orientado a consolidar mi trayectoria en ingeniería de software, arquitectura backend escalable y sistemas confiables en producción.",
+    "documentUrl": "",
+    "previewImage": ""
+  }
 ]

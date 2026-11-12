@@ -42,31 +42,74 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { WhatsAppFloatButton } from '@/components/WhatsAppFloatButton'
 import './globals.css'
 
-// Importar fuente Geist desde Google Fonts
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+// Importar fuentes Geist desde Google Fonts y exponerlas como variables CSS
+const geistSans = Geist({
+  subsets: ['latin'],
+  variable: '--font-geist-sans',
+})
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+})
 
-// Metadatos de la página (SEO - aparece en Google, redes sociales, etc.)
+// Metadatos de la página (SEO técnico para Google, OpenGraph y Twitter en español)
 export const metadata: Metadata = {
-  title: 'Brandon Alberto Hualpa Butron - Software Engineer',
-  description: 'Professional portfolio of a Software Engineering graduate focused on backend development, APIs, and scalable systems.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://brandonbutron.dev'),
+  title: {
+    default: 'Brandon Alberto Hualpa Butron | Bachiller en Ingeniería de Software',
+    template: '%s | Brandon Alberto Hualpa Butron',
+  },
+  description:
+    'Portafolio profesional de Brandon Alberto Hualpa Butron, Bachiller en Ingeniería de Software enfocado en desarrollo backend, APIs, desarrollo web full-stack y sistemas escalables.',
+  keywords: [
+    'Brandon Alberto Hualpa Butron',
+    'Brandon Hualpa',
+    'Brandon Butron',
+    'Bachiller en Ingeniería de Software',
+    'Desarrollo Backend',
+    'Backend Developer',
+    'Full Stack',
+    'Next.js',
+    'TypeScript',
+    'React',
+    'Portafolio',
+  ],
+  authors: [{ name: 'Brandon Alberto Hualpa Butron', url: 'https://brandonbutron.dev' }],
+  creator: 'Brandon Alberto Hualpa Butron',
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_PE',
+    url: 'https://brandonbutron.dev',
+    siteName: 'Brandon Alberto Hualpa Butron — Portafolio',
+    title: 'Brandon Alberto Hualpa Butron | Bachiller en Ingeniería de Software',
+    description:
+      'Portafolio profesional de Brandon Alberto Hualpa Butron, Bachiller en Ingeniería de Software enfocado en desarrollo backend, APIs, desarrollo web full-stack y sistemas escalables.',
+    images: [
       {
-        url: '/icon-bah-logo.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-bah-logo.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon_3.svg',
-        type: 'image/svg+xml',
+        url: '/icon-192x192.png',
+        width: 192,
+        height: 192,
+        alt: 'Brandon Alberto Hualpa Butron Monograma',
       },
     ],
-    apple: '/apple-icon.png',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Brandon Alberto Hualpa Butron | Bachiller en Ingeniería de Software',
+    description:
+      'Portafolio profesional de Brandon Alberto Hualpa Butron, Bachiller en Ingeniería de Software enfocado en desarrollo backend, APIs, desarrollo web full-stack y sistemas escalables.',
+    images: ['/icon-192x192.png'],
   },
 }
 
@@ -82,18 +125,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    // HTML raíz con soporte para dark mode
-    <html lang="en" suppressHydrationWarning>
-      {/* Body con fuente global y antialiasing para mejor renderizado */}
-      <body className="font-sans antialiased">
-        {/* 
+    <html
+      lang="es"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-foreground">
+        {/*
           ThemeProvider permite cambiar entre dark/light mode
           - attribute="class" = usa la clase 'dark' en el elemento HTML
           - defaultTheme="dark" = tema oscuro por defecto
-          - enableSystem = respeta preferencias del sistema operativo del usuario
         */}
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {/* Aquí se renderiza el contenido de cada página */}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
 
           {/* Botón flotante de WhatsApp - visible en todas las páginas */}

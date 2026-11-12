@@ -1,139 +1,158 @@
 'use client'
 
+import {
+  Code,
+  Layout,
+  Server,
+  Database,
+  Gamepad2,
+  Terminal,
+  Cpu,
+  Radio,
+  Layers,
+  Sparkles,
+  ExternalLink,
+} from 'lucide-react'
 import skillsData from '@/data/skills.json'
 
-/**
- * COMPONENTE SKILLS (HABILIDADES)
- * ===============================
- * Ubicación: components/Skills.tsx
- *
- * ¿Qué hace?
- * - Muestra las habilidades técnicas en tarjetas categorizadas
- * - Ahora consume los datos desde un JSON externo
- * - Cada categoría tiene su propia sección
- * - Mantiene los efectos visuales originales
- *
- * MODIFICACIÓN IMPORTANTE:
- * Antes las habilidades estaban escritas directamente en este archivo
- * dentro del array "skills".
- *
- * Ahora se leen desde:
- * - data/skills.json
- *
- * Ventaja:
- * - Ya no necesitas tocar el componente para agregar o editar habilidades
- * - Solo actualizas el JSON
- */
-
-/**
- * MODIFICACIÓN 1:
- * Esta interfaz representa cada bloque de habilidades
- * tal como viene desde el archivo JSON.
- */
 interface SkillGroup {
   category: string
   items: string[]
 }
 
-/**
- * MODIFICACIÓN 2:
- * Tipamos el JSON importado para que TypeScript entienda
- * correctamente la estructura de los datos.
- */
 const skills: SkillGroup[] = skillsData
 
+const CORE_CATEGORIES = new Set(['Backend', 'Bases de Datos'])
+
+const categoryIcons: Record<string, React.ElementType> = {
+  'Programación': Code,
+  Frontend: Layout,
+  Backend: Server,
+  'Bases de Datos': Database,
+  'Desarrollo de Juegos': Gamepad2,
+  'DevOps & Herramientas': Terminal,
+  'Automatización & Integración': Cpu,
+  'IoT & Electrónica': Radio,
+  'Metodologías & Software': Layers,
+}
+
 export function Skills() {
+  const totalTechnologies = skills.reduce((acc, group) => acc + group.items.length, 0)
+
   return (
     <section
       id="skills"
-      className="py-20 relative"
+      className="studio-panel rounded-2xl p-6 sm:p-8 flex flex-col gap-6"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-20 animate-pulse" />
-        <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-20 animate-pulse" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      {/* Left-Aligned Header */}
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border pb-5">
+        <div className="space-y-1">
+          <span className="text-xs font-mono font-medium text-primary">
+            Stack Tecnológico
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-[-0.02em] text-foreground">
             Habilidades Técnicas
-            <span className="text-primary">.</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Tecnologías utilizadas en proyectos reales, con enfoque en aprendizaje continuo y desarrollo práctico.
+          <p className="text-sm text-muted-foreground max-w-[65ch] leading-relaxed">
+            Tecnologías aplicadas en proyectos reales, con foco principal en desarrollo backend, bases de datos y arquitectura modular.
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skillGroup, index) => (
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-muted/60 border border-border text-xs font-mono text-muted-foreground tabular-nums shrink-0 self-start sm:self-auto">
+          <span>{skills.length} áreas</span>
+          <span aria-hidden="true">·</span>
+          <span className="text-foreground font-semibold">{totalTechnologies} herramientas</span>
+        </div>
+      </div>
+
+      {/* 9 Category Bento Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {skills.map((group) => {
+          const Icon = categoryIcons[group.category] || Code
+          const isCore = CORE_CATEGORIES.has(group.category)
+
+          return (
             <div
-              key={skillGroup.category}
-              className="group relative p-6 rounded-xl border-2 border-primary/40 bg-card hover:border-secondary/60 hover:bg-gradient-to-br hover:from-primary/10 hover:to-accent/10 transition-all duration-300 hover:shadow-xl hover:shadow-secondary/40 hover:-translate-y-2 animate-manga-scale-in overflow-hidden"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              key={group.category}
+              className={`group p-4 sm:p-5 rounded-xl border transition-colors duration-200 flex flex-col justify-between gap-4 ${
+                isCore
+                  ? 'bg-primary/[0.04] dark:bg-primary/[0.07] border-primary/35 hover:border-primary/60'
+                  : 'bg-muted/30 hover:bg-muted/50 border-border hover:border-primary/30'
+              }`}
             >
-              {/* Manga-style corner accent */}
-              <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-secondary/30 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-primary/30 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              {/* Category Title */}
-              <h3 className="text-lg font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent mb-4 group-hover:from-secondary group-hover:via-primary group-hover:to-accent transition-all duration-300 relative z-10">
-                {skillGroup.category}
-              </h3>
-
-              {/* Skills Items */}
-              <div className="space-y-3 relative z-10">
-                {skillGroup.items.map((skill, itemIndex) => (
-                  <div
-                    key={skill}
-                    className="flex items-center gap-3 text-foreground group/item cursor-default"
-                    style={{ animationDelay: `${itemIndex * 0.05}s` }}
-                  >
-                    {/* Animated dot */}
-                    <div className="relative flex items-center justify-center">
-                      <div className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-secondary to-primary group-hover/item:scale-150 transition-transform duration-300" />
+              <div>
+                {/* Category Header */}
+                <div className="flex items-start justify-between gap-2 mb-3.5">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div
+                      className={`w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 transition-colors duration-200 ${
+                        isCore
+                          ? 'bg-primary/15 border-primary/30 text-primary'
+                          : 'bg-background border-border text-muted-foreground group-hover:text-primary'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
                     </div>
+                    <h3 className="text-sm font-semibold text-foreground leading-snug">
+                      {group.category}
+                    </h3>
+                  </div>
 
-                    <span className="text-sm font-semibold group-hover/item:text-accent transition-colors duration-200">
+                  {isCore && (
+                    <span className="px-2 py-0.5 rounded-md bg-primary/10 border border-primary/25 text-xs font-mono font-medium text-primary shrink-0">
+                      Core
+                    </span>
+                  )}
+                </div>
+
+                {/* Skills Pills */}
+                <div className="flex flex-wrap gap-1.5">
+                  {group.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-1 rounded-lg bg-background border border-border text-xs font-medium text-foreground/90"
+                    >
                       {skill}
                     </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
-              {/* Manga shine effect */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:animate-manga-shine" />
-
-              {/* Border glow effect */}
-              <div
-                className="absolute inset-0 -z-10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  background:
-                    'radial-gradient(circle at top right, rgba(239, 68, 68, 0.3), transparent)',
-                  filter: 'blur(10px)',
-                }}
-              />
+              {/* Footer Indicator */}
+              <div className="pt-3 border-t border-border/80 flex items-center justify-between text-xs text-muted-foreground font-mono tabular-nums">
+                <span>{group.items.length} tecnologías</span>
+                <span
+                  aria-hidden="true"
+                  className={`w-1.5 h-1.5 rounded-full ${
+                    isCore ? 'bg-primary' : 'bg-muted-foreground/40 group-hover:bg-primary'
+                  } transition-colors`}
+                />
+              </div>
             </div>
-          ))}
-        </div>
+          )
+        })}
+      </div>
 
-        {/* Additional Info */}
-        <div className="mt-16 p-8 rounded-xl border border-accent/30 bg-gradient-to-r from-accent/5 to-primary/5">
-          <div className="text-center">
-            <p className="text-foreground text-lg mb-4">
-              <span className="font-semibold">Certificaciones y Cursos:</span> He completado múltiples cursos
-              en desarrollo backend, cloud computing y arquitectura de software para mantenerme actualizado
-              con las últimas tendencias en la industria.
-            </p>
-
-            <div className="inline-block px-6 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary font-semibold">
-              Siempre aprendiendo nuevas tecnologías
-            </div>
+      {/* Learning Banner */}
+      <div className="p-4 rounded-xl bg-muted/40 border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center gap-3 text-xs sm:text-sm text-muted-foreground">
+          <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/25 flex items-center justify-center text-primary shrink-0">
+            <Sparkles className="w-4 h-4" />
           </div>
+          <span className="leading-relaxed">
+            En actualización continua en buenas prácticas backend, arquitectura limpia y automatización.
+          </span>
         </div>
+
+        <a
+          href="https://github.com/BrandonAlbertt"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shrink-0 h-9 px-3.5 rounded-lg bg-background hover:bg-muted border border-border hover:border-primary/40 text-xs font-semibold text-foreground inline-flex items-center justify-center gap-1.5 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <span>Actividad en GitHub</span>
+          <ExternalLink className="w-3.5 h-3.5 text-primary" />
+        </a>
       </div>
     </section>
   )

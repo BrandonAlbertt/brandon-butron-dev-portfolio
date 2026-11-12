@@ -1,0 +1,11 @@
+version: 1
+
+service:
+  name: My Service
+  category: Backend
+  description: Short service description
+  repository:
+    provider: github
+    url: https://github.com/org/repo
+  ownership:
+    team: platform

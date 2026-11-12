@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Sistema de Alertas con Microservicios",
+    "category": "Microservicios",
     "description": "Sistema de automatización basado en microservicios que integra una API en Flask, un chatbot de WhatsApp y una base de datos Cassandra. Utiliza Docker para la contenerización, permitiendo el procesamiento de mensajes en tiempo real de emergencias, almacenamiento distribuido y escalabilidad del sistema.",
     "image": "/images/proyectos/1.png",
     "technologies": [
@@ -20,6 +21,7 @@
   {
     "id": 2,
     "title": "Portafolio de Desarrollador Web",
+    "category": "Web App",
     "description": "Portafolio personal desarrollado con Next.js, React y TypeScript. Incluye arquitectura basada en componentes, secciones de proyectos, certificados y diseño responsive.",
     "image": "/images/proyectos/2.png",
     "technologies": [
@@ -30,12 +32,13 @@
       "v0 AI"
     ],
     "github": "https://github.com/BrandonAlbertt/brandon-butron-dev-portfolio.git",
-    "demo": "https://brandonbutron.dev",
+    "demo": "https://antiguo.brandonbutron.dev",
     "video": "https://www.youtube.com/embed/r-Ir2rV03vY?si=YhHexn5K9F4rCZdb"
   },
   {
     "id": 3,
     "title": "Prototipo Multiplayer LAN en Godot",
+    "category": "Multiplayer / C#",
     "description": "Prototipo de sistema multiplayer en red local (LAN) desarrollado con Godot y C#. Permite que un jugador cree una partida como host y otros jugadores se conecten mediante una dirección IP dentro de la misma red. El proyecto demuestra arquitectura básica de networking, sincronización de jugadores y gestión de conexiones en tiempo real.",
     "image": "/images/proyectos/3.png",
     "technologies": [
@@ -50,42 +53,28 @@
     "video": "https://www.youtube.com/embed/5Ax7yEEJz0M?si=sWEbhG4FX0wcE63l"
   },
   {
-
     "id": 4,
-
     "title": "Reparación e Instalación Manual de Windows sin USB Boot",
-
+    "category": "Hardware & OS",
     "description": "Reparación de laptop Dell Inspiron 5567 con fallas en el sistema de alimentación y refrigeración. Se reemplazó el adaptador de corriente al detectar potencia incorrecta (AC Adapter 'Unknown') y se sustituyó el ventilador dañado tras errores de sistema. Posteriormente, se realizó la instalación manual de Windows sin USB booteable utilizando DiskPart, DISM y BCDBoot, configurando GPT y arranque UEFI. Proyecto enfocado en diagnóstico técnico, mantenimiento de hardware y despliegue de sistemas operativos.",
     "image": "/images/proyectos/4.png",
-
     "technologies": [
-
       "Windows",
-
       "DiskPart",
-
       "DISM",
-
       "BCDBoot",
-
       "UEFI",
-
       "GPT",
-
       "Soporte Técnico"
-
     ],
-
     "github": "#",
-
     "demo": "https://youtu.be/0LkYvb5X7j0?si=Ezun07656k1lP_Vd",
-
     "video": "https://www.youtube.com/embed/0LkYvb5X7j0?si=YmpJiQCLx4-lUBBN"
-
   },
   {
     "id": 5,
     "title": "Sistema Web Videoteca en Java (Servlets + JSP + MySQL)",
+    "category": "Enterprise Java",
     "description": "Aplicación web desarrollada con Java Servlets, JSP, Maven y Apache Tomcat 10, conectada a una base de datos MySQL/MariaDB. El sistema permite la gestión de videos por categorías, autenticación de usuarios con diferentes tipos de cuenta (Free y Premium), interacción mediante comentarios y favoritos, y administración de contenido desde un dashboard. Incluye generación de reportes dinámicos (boletas) con JasperReports, exportación de datos a Excel, recuperación de contraseña mediante Gmail SMTP y un chatbot básico integrado con Landbot.io. Proyecto enfocado en arquitectura MVC y patrón DAO, simulando un entorno real de gestión de contenido multimedia.",
     "image": "/images/proyectos/5.png",
     "technologies": [
@@ -105,5 +94,4 @@
     "demo": "https://drive.google.com/file/d/16uNDSG4etqXvOK2UNWODsK6J4QUnqmMn/view?usp=drive_link",
     "video": "https://www.youtube.com/embed/eOn6wNTNepQ?si=u9hBfrkLe7-bIVtj"
   }
-
 ]

@@ -1,6 +1,62 @@
 [
   {
     "id": 1,
+    "title": "GIT Y GITHUB: CONTROL DE VERSIONES SOFTWARE",
+    "organization": "Universidad Nacional de Ingeniería - UNI",
+    "year": 2026,
+    "certificateLink": "/documentos-pdf/certificados/GitAndGitHub.pdf",
+    "certificateImage": "/images/certificados/GitAndGitHub.webp"
+  },
+  {
+    "id": 2,
+    "title": "FUNDAMENTOS DE LINUX",
+    "organization": "Universidad Nacional de Ingeniería - UNI",
+    "year": 2026,
+    "certificateLink": "/documentos-pdf/certificados/Linux.pdf",
+    "certificateImage": "/images/certificados/Linux.webp"
+  },
+  {
+    "id": 3,
+    "title": "INICIACIÓN AL DESARROLLO CON IA: PROGRAMA CON AGENTES",
+    "organization": "BIG school & mouredev",
+    "year": 2026,
+    "certificateLink": "",
+    "certificateImage": "/images/certificados/DesarrolloConIA.webp"
+  },
+  {
+    "id": 4,
+    "title": "CLOUD COMPUTING: AWS - AZURE - GOOGLE CLOUD",
+    "organization": "Universidad Nacional de Ingeniería - UNI",
+    "year": 2026,
+    "certificateLink": "/documentos-pdf/certificados/cloudComputingAWSGoogleAzure.pdf",
+    "certificateImage": "/images/certificados/cloudComputingAWSGoogleAzure.webp"
+  },
+  {
+    "id": 5,
+    "title": "GRANDES MODELOS DE LENGUAJE (LLMS): CONSTRUYENDO UN AGENTE INTELIGENTE",
+    "organization": "Universidad Nacional de Ingeniería - UNI",
+    "year": 2026,
+    "certificateLink": "/documentos-pdf/certificados/GrandesModelosLLM.pdf",
+    "certificateImage": "/images/certificados/GrandesModelosLLM.webp"
+  },
+  {
+    "id": 6,
+    "title": "SQL - BASE DE DATOS 2",
+    "organization": "Universidad Nacional de Ingeniería - UNI",
+    "year": 2026,
+    "certificateLink": "/documentos-pdf/certificados/sql2.pdf",
+    "certificateImage": "/images/certificados/sql2.webp"
+  },
+  {
+    "id": 7,
+    "title": "FUNDAMENTOS DE ITIL® 4",
+    "organization": "Universidad Nacional de Ingeniería - UNI",
+    "year": 2026,
+    "certificateLink": "/documentos-pdf/certificados/fundametoITIL4.pdf",
+    "certificateImage": "/images/certificados/fundametoITIL4.webp"
+  },
+  {
+    "id": 8,
     "title": "Tutor STEM - Algoritmica",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
@@ -8,15 +64,15 @@
     "certificateImage": "/images/certificados/TutorSTEM-Algoritmica.jpg"
   },
   {
-    "id": 2,
-    "title": "Soporte Técnico de Computadoras",
+    "id": 9,
+    "title": "Tutor STEM Física",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/documentos-pdf/certificados/SoporteTecnicodecomputadoras.pdf",
-    "certificateImage": "/images/certificados/SoporteTecnicodecomputadoras.jpg"
+    "certificateLink": "/documentos-pdf/certificados/TutorSTEMfisica.pdf",
+    "certificateImage": "/images/certificados/TutorSTEMfisica.jpg"
   },
   {
-    "id": 3,
+    "id": 10,
     "title": "Certificado Inglés A2 MCER",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
@@ -24,7 +80,7 @@
     "certificateImage": "/images/certificados/InglesA2MCER.jpg"
   },
   {
-    "id": 4,
+    "id": 11,
     "title": "Excel Intermedio",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
@@ -32,11 +88,11 @@
     "certificateImage": "/images/certificados/ExelIntermedio.jpg"
   },
   {
-    "id": 5,
-    "title": "Tutor STEM Física",
+    "id": 12,
+    "title": "Soporte Técnico de Computadoras",
     "organization": "Universidad Tecnológica del Perú (UTP)",
     "year": 2024,
-    "certificateLink": "/documentos-pdf/certificados/TutorSTEMfisica.pdf",
-    "certificateImage": "/images/certificados/TutorSTEMfisica.jpg"
+    "certificateLink": "/documentos-pdf/certificados/SoporteTecnicodecomputadoras.pdf",
+    "certificateImage": "/images/certificados/SoporteTecnicodecomputadoras.jpg"
   }
 ]

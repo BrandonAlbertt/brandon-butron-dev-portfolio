@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
+@variant dark (&:where(.dark, .dark *));
 
 /* 
   ARCHIVO: app/globals.css
@@ -56,81 +56,87 @@
 */
 
 :root {
-  /* Light Mode - Tema profesional limpio */
-  --background: oklch(0.98 0 0);
-  --foreground: oklch(0.15 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.3 0.15 280);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.85 0.1 200);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.92 0 0);
-  --muted-foreground: oklch(0.55 0 0);
-  --accent: oklch(0.55 0.2 260);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0 0);
-  --input: oklch(0.96 0 0);
-  --ring: oklch(0.5 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.15 0 0);
-  --sidebar-primary: oklch(0.3 0.15 280);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.85 0.1 200);
-  --sidebar-accent-foreground: oklch(0.15 0 0);
-  --sidebar-border: oklch(0.92 0 0);
-  --sidebar-ring: oklch(0.5 0 0);
+  /* Light Mode - Precision Backend Studio */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --accent: #0284c7;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #cbd5e1;
+  --ring: #2563eb;
+  --chart-1: #0284c7;
+  --chart-2: #2563eb;
+  --chart-3: #4f46e5;
+  --chart-4: #0ea5e9;
+  --chart-5: #059669;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eff6ff;
+  --sidebar-accent-foreground: #1d4ed8;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #2563eb;
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: rgba(15, 23, 42, 0.2);
+  --scrollbar-thumb-hover: rgba(15, 23, 42, 0.35);
 }
 
 .dark {
-  /* Dark Mode - Tema oscuro juvenil con estilo manga y acentos vibrantes */
-  --background: oklch(0.1 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.15 0 0);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.15 0 0);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.55 0.25 290);
-  --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.5 0.28 20);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.22 0 0);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.65 0.3 200);
-  --accent-foreground: oklch(0.1 0 0);
-  --destructive: oklch(0.55 0.25 20);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.22 0 0);
-  --input: oklch(0.18 0 0);
-  --ring: oklch(0.65 0 0);
-  --chart-1: oklch(0.65 0.3 200);
-  --chart-2: oklch(0.55 0.25 290);
-  --chart-3: oklch(0.5 0.28 20);
-  --chart-4: oklch(0.6 0.25 60);
-  --chart-5: oklch(0.52 0.28 340);
-  --sidebar: oklch(0.12 0 0);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.55 0.25 290);
-  --sidebar-primary-foreground: oklch(0.95 0 0);
-  --sidebar-accent: oklch(0.65 0.3 200);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.22 0 0);
-  --sidebar-ring: oklch(0.65 0 0);
+  /* Dark Mode - Precision Backend Studio */
+  --background: #090d16;
+  --foreground: #f1f5f9;
+  --card: #0f1624;
+  --card-foreground: #f1f5f9;
+  --popover: #0f1624;
+  --popover-foreground: #f1f5f9;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #162033;
+  --secondary-foreground: #f1f5f9;
+  --muted: #131c2e;
+  --muted-foreground: #94a3b8;
+  --accent: #22d3ee;
+  --accent-foreground: #090d16;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(148, 163, 184, 0.14);
+  --input: rgba(148, 163, 184, 0.18);
+  --ring: #3b82f6;
+  --chart-1: #22d3ee;
+  --chart-2: #3b82f6;
+  --chart-3: #6366f1;
+  --chart-4: #38bdf8;
+  --chart-5: #10b981;
+  --sidebar: #0b101b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(59, 130, 246, 0.12);
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: rgba(148, 163, 184, 0.14);
+  --sidebar-ring: #3b82f6;
+  --scrollbar-track: #090d16;
+  --scrollbar-thumb: rgba(148, 163, 184, 0.22);
+  --scrollbar-thumb-hover: rgba(148, 163, 184, 0.4);
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: var(--font-geist-sans), 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), 'Geist Mono', 'Geist Mono Fallback', ui-monospace, SFMono-Regular, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -173,8 +179,28 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@keyframes workspaceViewEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -309,42 +335,136 @@
   }
   
   .glow-primary {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.15);
   }
   
   .glow-accent {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4), 0 0 40px rgba(0, 210, 255, 0.15);
   }
   
   .glow-secondary {
-    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5), 0 0 40px rgba(239, 68, 68, 0.2);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.15);
   }
-  
-  /* Manga-style card effect */
-  .manga-card {
-    @apply relative overflow-hidden rounded-lg border border-accent/30 bg-card;
-    background: linear-gradient(135deg, var(--tw-gradient-stops));
+
+  /* Precision Studio Surface & Workspace Motion */
+  .workspace-view-enter {
+    animation: workspaceViewEnter 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
-  
-  .manga-card::before {
-    content: '';
-    @apply absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    animation: mangaShine 2s infinite;
+
+  .studio-panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
   }
-  
-  /* Manga-style border glow */
-  .manga-border {
-    @apply relative;
-    border: 2px solid var(--accent);
-    border-radius: 0.5rem;
+
+  .dark .studio-panel {
+    box-shadow: 0 12px 32px -12px rgba(2, 6, 23, 0.65);
   }
-  
-  .manga-border::after {
-    content: '';
-    @apply absolute inset-0 -z-10 rounded;
-    background: radial-gradient(circle, var(--accent), transparent);
-    filter: blur(10px);
-    opacity: 0.3;
+
+  .studio-grid-overlay {
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(circle at 50% 25%, black, transparent 78%);
+  }
+
+  /* Cyber-Tech 3D Glass Panel (conservado por compatibilidad en Lotes 2-4) */
+  .cyber-panel {
+    background: var(--card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px -10px rgba(2, 6, 23, 0.12);
+  }
+
+  .dark .cyber-panel {
+    background: rgba(15, 22, 36, 0.88);
+    box-shadow: 0 12px 35px -8px rgba(2, 6, 23, 0.7);
+  }
+
+  .cyber-panel-hover {
+    transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .cyber-panel-hover:hover {
+    border-color: rgba(59, 130, 246, 0.38);
+    transform: translateY(-2px);
+  }
+
+  /* Cyber Card with 3D feel */
+  .cyber-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .cyber-card:hover {
+    border-color: rgba(59, 130, 246, 0.38);
+  }
+
+  /* Active Sidebar Glow */
+  .sidebar-active-glow {
+    background: var(--sidebar-accent);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  /* Cyber Background Grid */
+  .cyber-grid-overlay {
+    background-image: 
+      linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+  }
+
+  /* Cyber Text Gradient */
+  .cyber-text-gradient {
+    background: linear-gradient(135deg, #0284c7 0%, #2563eb 55%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .cyber-text-gradient {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Custom Adaptive Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .workspace-view-enter,
+  .animate-fade-in,
+  .animate-slide-in-up,
+  .animate-glow,
+  .animate-gradient,
+  .animate-manga-shine,
+  .animate-manga-pulse,
+  .animate-manga-float,
+  .animate-manga-scale-in {
+    animation: none !important;
+    transition: none !important;
   }
 }

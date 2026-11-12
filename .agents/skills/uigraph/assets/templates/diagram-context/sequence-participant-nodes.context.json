@@ -1,0 +1,18 @@
+{
+  "name": "Sequence participant examples",
+  "description": "Context for a sequenceDiagram file. Keys are generated node IDs (participant-<id>), not the participant names in the .mmd. Never set type or ___internal on a participant. See references/sequence-diagrams.md.",
+  "nodes": {
+    "participant-paymentService": {
+      "name": "Payment Service",
+      "data": {
+        "Owner": { "type": "Text Input", "value": "Payments Team" }
+      }
+    },
+    "participant-checkoutUi": {
+      "name": "Checkout UI",
+      "data": {
+        "Color": { "type": "Color Picker", "value": "#2563eb" }
+      }
+    }
+  }
+}

@@ -1,33 +1,91 @@
 'use client'
 
-export function CurrentGoals() {
-    return (
-        <section
-            id="current-goals"
-            className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
-        >
-            {/* Chispitas animadas detrás */}
-            <div className="absolute inset-0 -z-10 overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-accent/20 rounded-full blur-2xl animate-pulse opacity-30" />
-                <div className="absolute bottom-1/3 right-1/3 w-32 h-32 bg-accent/10 rounded-full blur-3xl animate-pulse opacity-20" />
-            </div>
+import { Briefcase, CheckCircle2, ArrowRight, MessageSquare } from 'lucide-react'
+import type { WorkspaceView } from './Sidebar'
 
-            <div className="p-8 rounded-2xl border-2 border-accent/40 bg-card hover:bg-accent/5 hover:shadow-lg transition-all duration-300 relative z-10">
-                <div className="text-center mb-6">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        Lo que busco actualmente
-                        <span className="text-accent">.</span>
-                    </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Actualmente busco oportunidades como Backend Developer Junior o Practicante, adaptándome a las necesidades del equipo y del proyecto.
+interface CurrentGoalsProps {
+  onNavigate?: (view: WorkspaceView) => void
+}
 
-                        Estoy preparado para asumir responsabilidades técnicas en desarrollo backend, así como para seguir aprendiendo dentro de un entorno profesional.
+const focusItems = [
+  'APIs REST',
+  'Java & Spring Boot',
+  'Node.js',
+  'Python',
+  'Bases de Datos',
+  'Docker & Linux',
+]
 
-                        Mi objetivo es aportar valor desde el inicio, mientras continúo desarrollando experiencia en proyectos reales.
+export function CurrentGoals({ onNavigate }: CurrentGoalsProps) {
+  const handleContact = () => {
+    if (onNavigate) {
+      onNavigate('contact')
+      return
+    }
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
-                    </p>
-                </div>
-            </div>
-        </section>
-    )
+  return (
+    <section
+      id="current-goals"
+      className="studio-panel rounded-2xl p-4 sm:p-6 border-l-2 border-l-primary"
+    >
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-6">
+        <div className="space-y-3 max-w-3xl">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-300 text-xs font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Disponible para contratación inmediata</span>
+            </span>
+            <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-foreground">
+              Lo que busco actualmente
+            </h2>
+          </div>
+
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+            Busco oportunidades como{' '}
+            <strong className="font-semibold text-foreground">
+              Backend Developer Junior o Practicante
+            </strong>
+            , preparado para aportar en desarrollo backend, diseño de APIs, bases de datos y automatización dentro de equipos de ingeniería.
+          </p>
+
+          <div className="flex flex-wrap gap-2 pt-0.5">
+            {focusItems.map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-muted/60 border border-border text-xs font-medium text-foreground"
+              >
+                <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                <span>{item}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Direct Action Buttons */}
+        <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 w-full sm:w-auto shrink-0">
+          <button
+            type="button"
+            onClick={handleContact}
+            className="w-full sm:w-auto min-h-[44px] sm:min-h-0 sm:h-10 px-4 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <Briefcase className="w-4 h-4" />
+            <span>Contactar para vacante</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+
+          <a
+            href="https://wa.me/51924516682?text=Hola%20Brandon,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad%20laboral"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto min-h-[44px] sm:min-h-0 sm:h-10 px-4 rounded-xl bg-background hover:bg-muted border border-border hover:border-primary/40 text-foreground font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <MessageSquare className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <span>Escribir por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  )
 }
