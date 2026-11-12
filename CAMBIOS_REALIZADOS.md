@@ -231,3 +231,6 @@ Modo Oscuro (Dark Mode):
 5. El portfolio mantiene estructura profesional bajo estética juvenil
 
 ¡Tu portfolio está listo para brillar! 🚀
+
+
+
