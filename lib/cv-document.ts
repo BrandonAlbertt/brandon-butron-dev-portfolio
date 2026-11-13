@@ -7,9 +7,5 @@ export const CV_DOCUMENT: DocumentData = {
   description:
     'Perfil general de Ingeniería de Software y Desarrollo Backend. Previsualiza el documento o descárgalo en formato PDF.',
   documentUrl: '/documentos-pdf/cv/Brandon_Alberto_Hualpa_Butron-CV.pdf',
-  previewImages: [
-    '/documentos-pdf/cv/Brandon_Alberto_Hualpa_Butron-CV-p1.webp',
-    '/documentos-pdf/cv/Brandon_Alberto_Hualpa_Butron-CV-p2.webp',
-  ],
 }
 

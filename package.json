@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/sync-pdf-previews.js && next build",
+    "sync:pdf": "node scripts/sync-pdf-previews.js",
     "start": "next start",
     "lint": "eslint ."
   },

@@ -64,13 +64,45 @@ function PdfViewer({
     setError(false)
 
     async function loadPdfPages() {
+      const cleanUrl = url.split('#')[0]
+
+      // 1. Check if pre-rendered WebP pages exist for this PDF (e.g. cv-p1.webp)
+      try {
+        const p1Url = cleanUrl.replace(/\.pdf$/i, '-p1.webp')
+        const testRes = await fetch(p1Url, { method: 'HEAD' })
+        if (testRes.ok) {
+          const detectedPages: string[] = [p1Url]
+          let pageIdx = 2
+          let hasMore = true
+          while (hasMore && pageIdx <= 10) {
+            const nextUrl = cleanUrl.replace(/\.pdf$/i, `-p${pageIdx}.webp`)
+            const nextRes = await fetch(nextUrl, { method: 'HEAD' })
+            if (nextRes.ok) {
+              detectedPages.push(nextUrl)
+              pageIdx++
+            } else {
+              hasMore = false
+            }
+          }
+
+          pdfPagesCache.set(url, detectedPages)
+          if (isMounted) {
+            setPages(detectedPages)
+            setLoading(false)
+          }
+          return
+        }
+      } catch (checkErr) {
+        // Fall back to direct PDF rendering
+      }
+
+      // 2. Direct PDF rendering using pdfjs-dist via binary ArrayBuffer
       try {
         const pdfjs = await import('pdfjs-dist')
         if (!pdfjs.GlobalWorkerOptions.workerSrc) {
           pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
         }
 
-        const cleanUrl = url.split('#')[0]
         const res = await fetch(cleanUrl)
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const arrayBuffer = await res.arrayBuffer()
